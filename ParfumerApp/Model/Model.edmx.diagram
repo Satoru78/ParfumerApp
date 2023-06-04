@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3892d1ebaca843fb8d58f792499c1341" Name="Diagram1">
+        <EntityTypeShape EntityType="dbParfumerModel.Order" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbParfumerModel.OrderStatus" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbParfumerModel.Product" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbParfumerModel.ProductCategory" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbParfumerModel.Role" Width="1.5" PointX="5.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbParfumerModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbParfumerModel.Unit" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbParfumerModel.User" Width="1.5" PointX="8" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="dbParfumerModel.FK_Order_OrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="dbParfumerModel.FK_Order_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="dbParfumerModel.FK_Product_ProductCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="dbParfumerModel.FK_Product_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="dbParfumerModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

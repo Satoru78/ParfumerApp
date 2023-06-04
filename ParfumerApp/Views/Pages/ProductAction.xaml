@@ -1,0 +1,65 @@
+﻿<Page x:Class="ParfumerApp.Views.Pages.ProductAction"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ParfumerApp.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductAction">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button Name="btnBack" Click="btnBack_Click" Content="Назад" Width="150" Margin="10"></Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Height="200" Width="200" Name="Img" Source="{Binding Product.GetPhoto}"></Image>
+            <Button Content="Выбрать" Name="SelectBtn" Click="SelectBtn_Click"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+            <TextBlock Text="Артикул: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.Articul}"></TextBox>
+            
+            <TextBlock Text="Название: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.Title}"></TextBox>
+            
+            <TextBlock Text="Еденица измерения: "></TextBlock>
+            <ComboBox Width="250" ItemsSource="{Binding Units}" SelectedItem="{Binding Product.Unit}" DisplayMemberPath="Title"></ComboBox>
+            
+            <TextBlock Text="Цена: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.Cost}"></TextBox>
+
+
+
+            <TextBlock Text="Размер макс. скидки: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.Discount}"></TextBox>
+
+            <TextBlock Text="Производитель: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.Manufacturer}"></TextBox>
+
+            <TextBlock Text="Поставщик: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.Supplier}"></TextBox>
+            
+            <TextBlock Text="категория продукта: "></TextBlock>
+            <ComboBox Width="250" ItemsSource="{Binding ProductCategories}" SelectedItem="{Binding Product.ProductCategory}" DisplayMemberPath="Title" ></ComboBox>
+            
+            <TextBlock Text="Скидка: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.Discount}"></TextBox>
+
+            <TextBlock Text="Количество на складе: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.QuantityInStock}"></TextBox>
+            
+            <TextBlock Text="Описание: "></TextBlock>
+            <TextBox Width="250" Text="{Binding Product.Description}"></TextBox>
+
+            <Button Content="Сохранить"  Margin="0,20,0,0" Name="SaveButton" Click="SaveButton_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
